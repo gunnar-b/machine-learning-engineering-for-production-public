@@ -3,17 +3,8 @@ from main import clf
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-from sklearn.exceptions import InconsistentVersionWarning
-warnings.simplefilter("error", InconsistentVersionWarning)
-
 
 def test_accuracy():
-
-    try:
-        est = pickle.loads("data/test_data.pkl")
-    except InconsistentVersionWarning as w:
-        print(w.original_sklearn_version)
-
 
     # Load test data
     with open("data/test_data.pkl", "rb") as file:

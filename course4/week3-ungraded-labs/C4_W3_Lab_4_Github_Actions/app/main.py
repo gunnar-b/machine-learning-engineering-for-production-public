@@ -4,21 +4,6 @@ from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel, conlist
 
-# Test comment
-from sklearn.exceptions import InconsistentVersionWarning
-#warnings.simplefilter("error", InconsistentVersionWarning)
-
-
-
-
-try:
-    with open("models/wine-95.pkl", "rb") as file:
-        clf = pickle.load(file)
-except InconsistentVersionWarning as w:
-    print("INCONSISTENT VERSIONS")
-    print(w.original_sklearn_version)
-
-
 
 app = FastAPI(title="Predicting Wine Class with batching")
 
