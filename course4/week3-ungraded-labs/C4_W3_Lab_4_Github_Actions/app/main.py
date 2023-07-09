@@ -6,7 +6,7 @@ from pydantic import BaseModel, conlist
 
 # Test comment
 from sklearn.exceptions import InconsistentVersionWarning
-warnings.simplefilter("error", InconsistentVersionWarning)
+#warnings.simplefilter("error", InconsistentVersionWarning)
 
 
 
