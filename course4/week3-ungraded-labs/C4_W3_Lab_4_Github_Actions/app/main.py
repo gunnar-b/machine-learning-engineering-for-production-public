@@ -12,7 +12,8 @@ from sklearn.exceptions import InconsistentVersionWarning
 
 
 try:
-    est = pickle.loads("models/wine-95.pkl")
+    with open("models/wine-95.pkl", "rb") as file:
+        clf = pickle.load(file)
 except InconsistentVersionWarning as w:
     print("INCONSISTENT VERSIONS")
     print(w.original_sklearn_version)
